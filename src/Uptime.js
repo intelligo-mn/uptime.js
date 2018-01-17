@@ -1,8 +1,9 @@
 'use strict';
 
-const request  = require('request');
+const EventEmitter = require('eventemitter3'),
+      request  = require('request');
 
-class Uptime {
+class Uptime extends EventEmitter{
    
     constructor(options) {
         super();

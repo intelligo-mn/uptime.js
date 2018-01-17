@@ -1,6 +1,6 @@
 {
   "name": "techstar-uptime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Uptime monitor",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "author": "Turtuvshin Byambaa",
   "license": "MIT",
   "dependencies": {
+    "eventemitter3": "^1.2.0",
     "request": "^2.82.0"
   }
 }
