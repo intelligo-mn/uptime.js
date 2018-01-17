@@ -51,7 +51,7 @@ const middlewareWrapper = config => {
     
               if (avgResTime > currService.timeout && currService.status !== 'DEGRADED') {
                 currService.status = 'DEGRADED'
-                postToSlack(service.url)
+                postToSlack(validatedConfig.url)
               } else if (avgResTime < currService.timeout && currService.status !== 'OPERATIONAL') {
                 currService.status = 'OPERATIONAL'
                 postToSlack(validatedConfig.url)

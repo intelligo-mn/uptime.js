@@ -1,6 +1,6 @@
 {
   "name": "techstar-uptime",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Uptime monitor",
   "main": "index.js",
   "scripts": {
