@@ -1,9 +1,6 @@
 'use strict';
 
-const express = require("express"),
-      config   = require('config'),
-      request  = require('request'),
-      services = require('./service');
+const request  = require('request');
 
 class Uptime {
    
@@ -13,7 +10,6 @@ class Uptime {
           throw new Error("You need to specify an SLACK_WEBHOOK_URL");
         }
         this.SLACK_WEBHOOK_URL = options.SLACK_WEBHOOK_URL;
-        this.app = options.app || express();
         this.pingInterval = 1*1000*60
         this.serviceStatus = {}
     }

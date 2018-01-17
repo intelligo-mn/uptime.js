@@ -1,0 +1,14 @@
+{
+  "name": "techstar-uptime",
+  "version": "1.0.0",
+  "description": "Uptime monitor",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Turtuvshin Byambaa",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.82.0"
+  }
+}
