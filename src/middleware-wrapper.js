@@ -23,21 +23,21 @@ const middlewareWrapper = config => {
     const pingInterval = 1*1000*60 // 1 minutes
     let serviceStatus = {}
     
-    validatedConfig.websites.forEach(service => {
-      serviceStatus[service.url] = {
+    monitor => {
+      serviceStatus[validatedConfig.url] = {
         status: 'OPERATIONAL', // initialize all services as operational when we start
         responseTimes: [], // array containing the responses times for last 3 pings
-        timeout: service.timeout // load up the timout from the config
+        timeout: validatedConfig.timeout // load up the timout from the config
       }
     
       setInterval(() => {
-        pingService(service.url, (serviceResponse) => {
-          if (serviceResponse === 'OUTAGE' && serviceStatus[service.url].status !== 'OUTAGE') {
+        pingService(validatedConfig.url, (serviceResponse) => {
+          if (serviceResponse === 'OUTAGE' && serviceStatus[validatedConfig.url].status !== 'OUTAGE') {
             // only update and post to Slack on state change
-            serviceStatus[service.url].status = 'OUTAGE'
-            postToSlack(service.url)
+            serviceStatus[validatedConfig.url].status = 'OUTAGE'
+            postToSlack(validatedConfig.url)
           } else {
-            let responseTimes = serviceStatus[service.url].responseTimes
+            let responseTimes = serviceStatus[validatedConfig.url].responseTimes
             responseTimes.push(serviceResponse)
     
             // check degraded performance if we have 3 responses so we can average them
@@ -47,21 +47,21 @@ const middlewareWrapper = config => {
     
               // compute average of last 3 response times
               let avgResTime = responseTimes.reduce((a, b) => a + b, 0) / responseTimes.length
-              let currService = serviceStatus[service.url]
+              let currService = serviceStatus[validatedConfig.url]
     
               if (avgResTime > currService.timeout && currService.status !== 'DEGRADED') {
                 currService.status = 'DEGRADED'
                 postToSlack(service.url)
               } else if (avgResTime < currService.timeout && currService.status !== 'OPERATIONAL') {
                 currService.status = 'OPERATIONAL'
-                postToSlack(service.url)
+                postToSlack(validatedConfig.url)
               }
             }
     
           }
         })
       }, pingInterval)
-    })
+    }
     
     const postToSlack = (serviceUrl) => {
       var message = "";
