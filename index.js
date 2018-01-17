@@ -1,5 +1,1 @@
-'use strict';
-
-const Uptime = require('./src/Uptime');
-
-module.exports = Uptime;
+module.exports = require('./src/middleware-wrapper');
