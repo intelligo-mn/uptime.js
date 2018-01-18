@@ -4,6 +4,10 @@ Uptime monitor in Node.js that send status changes to Slack
 
 [![NPM](https://nodei.co/npm/techstar-uptime.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/techstar-uptime/)
 
+
+| [Installation][] | [Usage][] | [Setting up Slack][] | [Contributors][] | [License][] |
+|---|---|---|---|---|
+
 # Installation
 
 ```
@@ -63,3 +67,13 @@ or translating any document here to your language. [Find more information in CON
 ## License
 
 [MIT](LICENSE).
+
+
+**[⬆ back to top](#node-uptime-bot)**
+
+[Installation]:#installation
+[Usage]:#usage
+[Setting up Slack]:#setting-up-slack
+[Contributors]:#contributors
+[License]:#license
+
