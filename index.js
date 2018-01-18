@@ -1,1 +1,1 @@
-module.exports = require('./src/middleware-wrapper');
+module.exports = require('./src/Uptime');
