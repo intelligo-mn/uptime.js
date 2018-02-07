@@ -31,15 +31,25 @@ module.exports = [
 ```
 
 ```js
-const website = require('./websites'),
-      Uptime  = require('techstar-uptime');
-      
-const uptime = new Uptime({
+'use strict';
+
+const express  = require( 'express')
+      Uptime   = require('techstar-uptime');
+
+const app = express();
+
+const bot = new Uptime({
   SLACK_WEBHOOK_URL: 'SLACK_WEBHOOK_URL'
 });
-uptime.monitor(website);
+bot.monitor([
+  {
+    url: 'https://www.example.com', // URL of service we'll be pining
+    timeout: 200 // threshold in milliseconds above which is considered degraded performance
+  }
+]);
 
-app.use('/uptime', uptime);
+module.exports = app;
+
 ```
 
 # Setting up Slack
