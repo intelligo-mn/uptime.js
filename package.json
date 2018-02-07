@@ -1,6 +1,6 @@
 {
   "name": "techstar-uptime",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Uptime monitor in Node.js that send status changes to Slack",
   "author": "Turtuvshin Byambaa",
   "homepage": "https://www.techstar.cloud",
@@ -13,7 +13,12 @@
     "monitor",
     "slack",
     "webhook",
-    "bot"
+    "server",
+    "monitoring",
+    "health",
+    "status",
+    "ping",
+    "check"
   ],
   "scripts": {
     "start": "node index.js"
