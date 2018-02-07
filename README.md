@@ -16,20 +16,6 @@ npm install techstar-uptime --save
 
 # Usage
 
-Create the `websites.js` file and specify some services we wish to monitor.
-
-```js
-module.exports = [
-  {
-    url: 'https://www.google.com', // URL of service we'll be pining
-    timeout: 200 // threshold in milliseconds above which is considered degraded performance
-  },{
-    url: 'https://www.github.com',
-    timeout: 200 
-  },
-]
-```
-
 ```js
 'use strict';
 
