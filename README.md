@@ -42,17 +42,17 @@ app.use('/uptime', uptime);
 
 Head on over to the Incoming WebHooks Slack app. If you're signed in to your Slack Workspace you should see an Add Configuration button. Hit it!
 
-![screenshot](https://github.com/techstar-cloud/techstar-uptime/blob/master/public/img/image1.png)
+![screenshot](https://raw.githubusercontent.com/techstar-cloud/techstar-uptime/master/public/img/image1.png)
 
 Select or create a new channel then hit the Add Incoming WebHooks integration
-![screenshot](https://github.com/techstar-cloud/techstar-uptime/blob/master/public/img/image2.png)
+![screenshot](https://raw.githubusercontent.com/techstar-cloud/techstar-uptime/master/public/img/image2.png)
 
 Grab the WebHook URL and paste it into the `SLACK_WEBHOOK_URL`, which would look like so:
 `SLACK_WEBHOOK_URL=https://hooks.slack.com/services/XXXXXX/YYYYYY/XXXXXXXXXXXX`
-![screenshot](https://github.com/techstar-cloud/techstar-uptime/blob/master/public/img/image3.png)
+![screenshot](https://raw.githubusercontent.com/techstar-cloud/techstar-uptime/master/public/img/image3.png)
 
 You can update `websites.js` with the services you wish to monitor and throw the code up on a server.
-![screenshot](https://github.com/techstar-cloud/techstar-uptime/blob/master/public/img/image4.png)
+![screenshot](https://raw.githubusercontent.com/techstar-cloud/techstar-uptime/master/public/img/image4.png)
 
 ## Contributors
 
