@@ -1,5 +1,10 @@
 # Node uptime bot
 
+[![npm](https://img.shields.io/npm/v/techstar-uptime.svg?style=plastic)](https://www.npmjs.com/package/techstar-uptime)
+[![npm](https://img.shields.io/npm/dt/techstar-uptime.svg?style=plastic)](https://www.npmjs.com/package/techstar-uptime)
+[![GitHub license](https://img.shields.io/github/license/techstar-cloud/intelligo.svg)](https://github.com/techstar-cloud/techstar-uptime/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/techstar-cloud/techstar-uptime.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Ftechstar-cloud%2Fintelligo)
+
 Uptime monitor in Node.js that send status changes to Slack
 
 [![NPM](https://nodei.co/npm/techstar-uptime.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/techstar-uptime/)
