@@ -17,7 +17,6 @@ class Uptime extends EventEmitter{
  
     pingService(url, cb){
       
-      console.log("PING START");
       request({
         method: 'GET',
         uri: url,
@@ -35,14 +34,13 @@ class Uptime extends EventEmitter{
         
     postToSlack(serviceUrl){
       
-      console.log("POST TO SLACK START");
       var message = "";
       if (this.serviceStatus[serviceUrl].status == 'DEGRADED'){
-          message = "`СИСТЕМИЙН АЖИЛЛАГАА УНАСАН !!!` :skull: ";
+          message = "`Degraded System Service !!!` :skull: ";
       } else if (this.serviceStatus[serviceUrl].status == 'OPERATIONAL') {
-         message = "СИСТЕМИЙН АЖИЛЛАГАА ХЭВИЙН БАЙНА :robot_face:";
+         message = "System Operational :robot_face:";
       } else if (this.serviceStatus[serviceUrl].status == 'OUTAGE') {
-         message = "СИСТЕМИЙН АЖИЛЛАГАА ДОГОЛДЛОО :zzz:";
+         message = "System Outage :zzz:";
       }
       let slackPayload = {
         text: `*${message}*\n_${serviceUrl}_`
@@ -59,7 +57,6 @@ class Uptime extends EventEmitter{
     }
     
     monitor(websites){
-        console.log("MONITOR START");
         websites.forEach(service => {
           this.serviceStatus[service.url] = {
             status: 'OPERATIONAL', // initialize all services as operational when we start
