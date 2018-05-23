@@ -24,22 +24,27 @@ npm install techstar-uptime --save
 ```js
 'use strict';
 
-const express  = require( 'express')
+const express  = require('express'),
       Uptime   = require('techstar-uptime');
 
 const app = express();
 
+app.set('port', process.env.PORT || 5000);
+
 const bot = new Uptime({
   SLACK_WEBHOOK_URL: 'SLACK_WEBHOOK_URL'
 });
+
 bot.monitor([
   {
-    url: 'https://www.example.com', // URL of service we'll be pining
+    url: 'https://www.techstar.cloud', // URL of service we'll be pining
     timeout: 200 // threshold in milliseconds above which is considered degraded performance
   }
 ]);
 
-module.exports = app;
+app.listen(app.get('port'), () => {
+    console.log('Express is listening on port', app.get('port'));
+});
 
 ```
 

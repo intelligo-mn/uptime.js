@@ -1,15 +1,23 @@
 'use strict';
 
-const express  = require( 'express'),
-      config   = require('config'),
-      websites = require('./websites'),
+const express  = require('express'),
       Uptime   = require('techstar-uptime');
 
 const app = express();
 
-const bot = new Uptime({
-  SLACK_WEBHOOK_URL: config.get('SLACK_WEBHOOK_URL')
-});
-bot.monitor(websites);
+app.set('port', process.env.PORT || 5000);
 
-module.exports = app;
+const bot = new Uptime({
+  SLACK_WEBHOOK_URL: 'SLACK_WEBHOOK_URL'
+});
+
+bot.monitor([
+  {
+    url: 'https://www.techstar.cloud', // URL of service we'll be pining
+    timeout: 200 // threshold in milliseconds above which is considered degraded performance
+  }
+]);
+
+app.listen(app.get('port'), () => {
+    console.log('Express is listening on port', app.get('port'));
+});
