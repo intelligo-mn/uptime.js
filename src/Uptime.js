@@ -91,10 +91,9 @@ class Uptime extends EventEmitter{
                     this.postToSlack(service.url)
                   } else if (avgResTime < currService.timeout && currService.status !== 'OPERATIONAL') {
                     currService.status = 'OPERATIONAL'
-                    this.ostToSlack(service.url)
+                    this.postToSlack(service.url)
                   }
                 }
-        
               }
             })
           }, this.pingInterval)
