@@ -82,7 +82,7 @@ with the services you wish to monitor and throw the code up on a server.
 
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
 or translating any document here to your language. [Find more information in CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md).
-<a href="https://github.com/techstar-cloud/techstar-uptime/graphs/contributors">Contributors</a>
+<a href="https://github.com/opengineer/techstar-uptime/graphs/contributors">Contributors</a>
 
 ## License
 
