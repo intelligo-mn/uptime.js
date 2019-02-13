@@ -1,7 +1,7 @@
 'use strict';
 
 const express  = require('express'),
-      Uptime   = require('techstar-uptime');
+      Uptime   = require('uptime.js');
 
 const app = express();
 

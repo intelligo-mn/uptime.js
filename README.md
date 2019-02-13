@@ -1,13 +1,13 @@
 # Node uptime bot
 
-[![npm](https://img.shields.io/npm/v/techstar-uptime.svg?style=plastic)](https://www.npmjs.com/package/techstar-uptime)
-[![npm](https://img.shields.io/npm/dt/techstar-uptime.svg?style=plastic)](https://www.npmjs.com/package/techstar-uptime)
-[![GitHub license](https://img.shields.io/github/license/techstar-cloud/intelligo.svg)](https://github.com/techstar-cloud/techstar-uptime/blob/master/LICENSE)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/techstar-cloud/techstar-uptime.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Ftechstar-cloud%2Fintelligo)
+[![npm](https://img.shields.io/npm/v/uptime.js.svg?style=plastic)](https://www.npmjs.com/package/uptime.js)
+[![npm](https://img.shields.io/npm/dt/uptime.js.svg?style=plastic)](https://www.npmjs.com/package/uptime.js)
+[![GitHub license](https://img.shields.io/github/license/intelligo-systems/uptime.js.svg)](https://github.com/intelligo-systems/uptime.js/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/intelligo-systems/uptime.js.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fintelligo-systems%2Fintelligo)
 
-Uptime monitor in Node.js that send status changes to Slack
+Uptime monitor in Node.js that send status changes to Chatbots
 
-[![NPM](https://nodei.co/npm/techstar-uptime.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/techstar-uptime/)
+[![NPM](https://nodei.co/npm/uptime.js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/uptime.js/)
 
 
 | [Installation][] | [Usage][] | [Setting up Slack][] | [Contributors][] | [License][] |
@@ -16,7 +16,7 @@ Uptime monitor in Node.js that send status changes to Slack
 # Installation
 
 ```
-npm install techstar-uptime --save
+npm install uptime.js --save
 ```
 
 # Usage
@@ -25,7 +25,7 @@ npm install techstar-uptime --save
 'use strict';
 
 const express  = require('express'),
-      Uptime   = require('techstar-uptime');
+      Uptime   = require('uptime.js');
 
 const app = express();
 
@@ -37,7 +37,7 @@ const bot = new Uptime({
 
 bot.monitor([
   {
-    url: 'https://www.techstar.cloud', // URL of service we'll be pining
+    url: 'https://www.intelligo.systems', // URL of service we'll be pining
     timeout: 200 // threshold in milliseconds above which is considered degraded performance
   }
 ]);
@@ -52,17 +52,17 @@ app.listen(app.get('port'), () => {
 
 Head on over to the Incoming WebHooks Slack app. If you're signed in to your Slack Workspace you should see an Add Configuration button. Hit it!
 
-![screenshot](https://raw.githubusercontent.com/techstar-cloud/techstar-uptime/master/public/img/image1.png)
+![screenshot](https://raw.githubusercontent.com/intelligo-systems/uptime.js/master/public/img/image1.png)
 
 Select or create a new channel then hit the Add Incoming WebHooks integration
 
-![screenshot](https://raw.githubusercontent.com/techstar-cloud/techstar-uptime/master/public/img/image2.png)
+![screenshot](https://raw.githubusercontent.com/intelligo-systems/uptime.js/master/public/img/image2.png)
 
 Grab the WebHook URL and paste it into the `SLACK_WEBHOOK_URL`, which would look like so:
 
 `SLACK_WEBHOOK_URL=https://hooks.slack.com/services/XXXXXX/YYYYYY/XXXXXXXXXXXX`
 
-![screenshot](https://raw.githubusercontent.com/techstar-cloud/techstar-uptime/master/public/img/image3.png)
+![screenshot](https://raw.githubusercontent.com/intelligo-systems/uptime.js/master/public/img/image3.png)
 
 You can update 
 
@@ -76,13 +76,13 @@ bot.monitor([
 ``` 
 with the services you wish to monitor and throw the code up on a server.
 
-![screenshot](https://raw.githubusercontent.com/techstar-cloud/techstar-uptime/master/public/img/image4.png)
+![screenshot](https://raw.githubusercontent.com/intelligo-systems/uptime.js/master/public/img/image4.png)
 
 ## Contributors
 
 You may contribute in several ways like creating new features, fixing bugs, improving documentation and examples
 or translating any document here to your language. [Find more information in CODE_OF_CONDUCT.md](.github/CODE_OF_CONDUCT.md).
-<a href="https://github.com/opengineer/techstar-uptime/graphs/contributors">Contributors</a>
+<a href="https://github.com/intelligo-systems/uptime.js/graphs/contributors">Contributors</a>
 
 ## License
 
