@@ -1,6 +1,6 @@
 {
   "name": "uptime.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Uptime monitor in Node.js that send status changes to Chatbots",
   "author": "Turtuvshin Byambaa",
   "homepage": "https://uptime.js.org",
@@ -28,7 +28,8 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "eventemitter3": "^1.2.0",
-    "request": "^2.82.0"
+    "eventemitter3": "^3.1.0",
+    "request": "^2.82.0",
+    "intelligo": "^0.8.12"
   }
 }

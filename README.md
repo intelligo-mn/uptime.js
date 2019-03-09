@@ -69,7 +69,7 @@ You can update
 ```js
 bot.monitor([
   {
-    url: 'https://www.techstar.cloud', // URL of service we'll be pining
+    url: 'https://www.intelligo.systems', // URL of service we'll be pining
     timeout: 200 // threshold in milliseconds above which is considered degraded performance
   }
 ]);
@@ -86,8 +86,9 @@ or translating any document here to your language. [Find more information in COD
 
 ## License
 
-[MIT](LICENSE).
-
+> Copyright (C) 2019 Intelligo Systems.  
+> uptime.js is open-sourced software licensed under the [MIT](https://opensource.org/licenses/MIT) license.  
+> (See the [LICENSE](https://github.com/intelligo-systems/uptime.js/blob/master/LICENSE) file for the whole license text.)
 
 **[⬆ back to top](#node-uptime-bot)**
 
