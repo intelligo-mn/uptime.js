@@ -1,6 +1,6 @@
 {
   "name": "uptime.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Uptime monitor in Node.js that send status changes to Chatbots",
   "author": "Turtuvshin Byambaa",
   "homepage": "https://uptime.js.org",
