@@ -3,16 +3,16 @@ sidebar: auto
 type: guide
 ---
 
-
 ## Introduction
 
 Uptime monitor in Node.js that send status changes to Chatbots. 
 
-[![NPM](https://nodei.co/npm/uptime.js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/uptime.js/)
 
 ### Version
 
-This project is currently at `version 1.0.2`.
+This project is currently at 
+
+[![NPM](https://nodei.co/npm/uptime.js.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/uptime.js/)
 
 ## Getting Started
 
