@@ -30,7 +30,7 @@
     "build": "vuepress build web"
   },
   "dependencies": {
-    "eventemitter3": "^3.1.0",
+    "eventemitter3": "^4.0.0",
     "request": "^2.82.0",
     "intelligo": "^0.8.12"
   },
