@@ -22,8 +22,6 @@ npm install uptime.js --save
 # Usage
 
 ```js
-'use strict';
-
 const express  = require('express'),
       Uptime   = require('uptime.js');
 
