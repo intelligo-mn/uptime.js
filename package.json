@@ -1,6 +1,6 @@
 {
   "name": "uptime.js",
-  "version": "1.2.4",
+  "version": "1.2.6",
   "description": "Uptime monitor in Node.js that send status changes to Chatbots",
   "author": "Turtuvshin Byambaa",
   "homepage": "https://uptime.js.org",
@@ -27,7 +27,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "vuepress dev web",
-    "build": "vuepress build web"
+    "build": "vuepress build web",
+    "release": "release-it"
   },
   "dependencies": {
     "eventemitter3": "4.0.0",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "1.0.3",
+    "release-it": "^12.3.5",
     "vuepress": "1.0.3",
     "vuepress-plugin-janitor": "1.0.0",
     "vuepress-plugin-reading-time": "0.1.1",
