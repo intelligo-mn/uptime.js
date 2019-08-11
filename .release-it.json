@@ -1,9 +1,34 @@
 {
-  "github": {
-    "release": false
-  },
   "git": {
-    "requireCleanWorkingDir": false 
+  "changelog": "git log --pretty=format:\"* %s (%h)\" ${latestTag}...HEAD",
+  "requireCleanWorkingDir": false,
+  "requireUpstream": true,
+  "requireCommits": false,
+  "addUntrackedFiles": false,
+  "commit": true,
+  "commitMessage": "Release ${version}",
+  "commitArgs": "",
+  "tag": true,
+  "tagName": "${version}",
+  "tagAnnotation": "Release ${version}",
+  "tagArgs": "",
+  "push": true,
+  "pushArgs": "--follow-tags",
+  "pushRepo": "origin"
+  },
+  "npm": {
+    "publish": true,
+    "publishPath": ".",
+    "access": null,
+    "otp": null
+  },
+  "github": {
+    "release": false,
+    "releaseName": "Release ${version}",
+    "releaseNotes": null,
+    "preRelease": false,
+    "draft": false,
+    "assets": null,
+    "host": null
   }
-  
 }
