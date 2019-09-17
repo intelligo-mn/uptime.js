@@ -1,10 +1,10 @@
-"use strict";
+import * as request from "request";
 
-const request = require("request");
-
-class Uptime {
-  constructor(options) {
-    super();
+export class Uptime {
+  SLACK_WEBHOOK_URL: any;
+  pingInterval: number;
+  serviceStatus: {};
+  constructor(options: any) {
     if (!options || (options && !options.SLACK_WEBHOOK_URL)) {
       throw new Error("You need to specify an SLACK_WEBHOOK_URL");
     }
@@ -13,7 +13,7 @@ class Uptime {
     this.serviceStatus = {};
   }
 
-  pingService(url, cb) {
+  pingService(url: string, cb: any) {
     request(
       {
         method: "GET",
@@ -32,7 +32,7 @@ class Uptime {
     );
   }
 
-  postToSlack(serviceUrl) {
+  postToSlack(serviceUrl: any) {
     var message = "";
     if (this.serviceStatus[serviceUrl].status == "DEGRADED") {
       message = "`Degraded System Service !!!` :skull: ";
@@ -58,7 +58,7 @@ class Uptime {
     );
   }
 
-  monitor(websites) {
+  monitor(websites: any) {
     websites.forEach(service => {
       this.serviceStatus[service.url] = {
         status: "OPERATIONAL", // initialize all services as operational when we start
@@ -109,5 +109,3 @@ class Uptime {
     });
   }
 }
-
-module.exports = Uptime;

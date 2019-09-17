@@ -1,12 +1,13 @@
 {
   "name": "uptime.js",
-  "version": "1.2.10",
+  "version": "1.3.1",
   "description": "Uptime monitor in Node.js that send status changes to Chatbots",
   "author": "Turtuvshin Byambaa",
   "homepage": "https://uptime.js.org",
   "copyright": "Copyright 2019 Intelligo Systems",
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "typings": "./lib/index.d.ts",
   "repository": "intelligo-systems/uptime.js",
   "keywords": [
     "uptime",
@@ -25,22 +26,32 @@
     "check"
   ],
   "scripts": {
-    "start": "node index.js",
     "dev": "vuepress dev web",
-    "build": "vuepress build web",
+    "build": "tsc",
+    "build:docs": "vuepress build web",
+    "lint": "tslint -p tsconfig.json",
     "release": "release-it"
   },
+  "files": [
+    "/lib",
+    "/src"
+  ],
   "dependencies": {
     "request": "2.88.0",
-    "intelligo": "1.2.1"
+    "intelligo": "1.2.6"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "1.0.3",
-    "release-it": "12.3.6",
-    "vuepress": "1.0.3",
+    "@vuepress/plugin-google-analytics": "1.1.0",
+    "@types/request": "2.48.3",
+    "@types/node": "12.7.5",
+    "release-it": "12.4.0",
+    "vuepress": "1.1.0",
     "vuepress-plugin-janitor": "1.0.0",
     "vuepress-plugin-reading-time": "0.1.1",
     "vuepress-plugin-rss": "2.0.0",
-    "yaml-front-matter": "4.0.0"
+    "yaml-front-matter": "4.0.0",
+    "tslint": "5.20.0",
+    "tslint-config-prettier": "1.18.0",
+    "typescript": "3.6.3"
   }
 }
