@@ -37,12 +37,12 @@
     "/src"
   ],
   "dependencies": {
-    "request": "2.88.0",
+    "request": "2.88.2",
     "intelligo": "1.3.0"
   },
   "devDependencies": {
     "@vuepress/plugin-google-analytics": "1.1.0",
-    "@types/request": "2.48.4",
+    "@types/request": "2.48.7",
     "@types/node": "12.12.6",
     "release-it": "12.4.3",
     "vuepress": "1.1.0",
