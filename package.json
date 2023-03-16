@@ -44,7 +44,7 @@
     "@vuepress/plugin-google-analytics": "1.1.0",
     "@types/request": "2.48.4",
     "@types/node": "12.12.6",
-    "release-it": "12.4.3",
+    "release-it": "13.6.8",
     "vuepress": "1.1.0",
     "vuepress-plugin-janitor": "1.0.0",
     "vuepress-plugin-reading-time": "0.1.1",
